@@ -1,0 +1,244 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: url(../img/fundo.png);
+    overflow-x: hidden;
+}
+
+.btn {
+    padding: 25px 60px;
+    display: inline;
+    background-color: tomato;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.btn:hover {
+    background-color: #ff4c2c;
+}
+
+.modal-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal {
+    width: auto;
+    min-width: 500px;
+    background-color: #000A1A;
+    box-shadow: 0 0 10px 0 rgba(21, 111, 195, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 3rem 2rem 2rem 3rem;
+    font-size: 15pt;
+}
+
+/*.fechar {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14pt;
+    cursor: pointer;
+}*/
+
+.fechar {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: #ff00009c;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14pt;
+    padding-top: 5px;
+
+}
+
+.fechar:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: rgb(0, 209, 0);
+    text-align: center;
+}
+
+@keyframes animate-modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+.mostrar .modal {
+    animation: animate-modal .3s;
+}
+
+
+
+
+/*==============Responsivo===============*/
+
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .modal {
+        min-width: 100px;
+        padding: 3rem 2rem 3rem 2rem;
+        font-size: 15pt;
+        margin-left: 2%;
+        margin-right: 0;
+    }
+
+    .fechar {
+        position: absolute;
+        top: -20px;
+        right: -10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        background-color: #ff00009c;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15pt;
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width:991px) {
+    .modal-container {
+        width: 100%;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .modal {
+        min-width: 100px;
+        padding: 3rem 2rem 3rem 2rem;
+        font-size: 15pt;
+        margin: 0 1.5rem 0 1.5rem;
+    }
+
+    .fechar {
+        position: absolute;
+        top: -20px;
+        right: -10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        background-color: #ff00009c;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15pt;
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width:768px) {
+    html {
+        font-size: 70%;
+    }
+
+    .modal {
+        min-width: 100px;
+        padding: 2rem 2rem 0 2rem;
+        font-size: 15pt;
+        margin: 0 1.5rem 0 1.5rem;
+    }
+
+    .fechar {
+        position: absolute;
+        top: -20px;
+        right: -10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        background-color: #ff00009c;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15pt;
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width:400px) {
+    .modal {
+        min-width: 90px;
+        padding: 2rem 2rem 0 2rem;
+        font-size: 15px;
+        margin: 0 1.5rem 0 1.5rem;
+    }
+
+    .fechar {
+        position: absolute;
+        top: -3px;
+        right: -2px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: none;
+        background-color: #ff00009c;
+        color: #fff;
+        font-weight: 700;
+        font-size: 13pt;
+        cursor: pointer;
+    }
+
+}
